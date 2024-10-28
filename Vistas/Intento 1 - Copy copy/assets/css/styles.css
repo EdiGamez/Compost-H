@@ -1,0 +1,119 @@
+:root{
+  --color-bg: #edf2f7ff;
+  --color-text-body:#625f5f88;
+  --color-secundary: #14b8a5ff;
+  --color-primary: rgb(255, 255, 255);
+  --color-transparent: transparent;
+
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+body{
+  width: 100%;
+  height: auto;
+  font-family: poppins;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-body);
+  background-color: var(--color-bg);
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+
+}
+.layout {
+  position: relative;
+  min-width: 1000px;
+  width: 90%;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.layout__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.menu__navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item {
+  margin-right: 1.5rem;
+}
+
+.nav__title {
+  color: var(--color-text-body);
+  text-decoration: none;
+}
+
+.navbar__logo-image {
+  max-width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+}
+.nav__icon-user{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-secundary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+.layout {
+  width: 90%; /* Cubre el 90% del ancho */
+  margin: 0 auto; /* Centrado horizontalmente */
+  background-color: var(--color-primary); /* Color de fondo blanco */
+}
+
+.layout__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.menu__navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item {
+  margin-right: 1.5rem;
+}
+
+.nav__title {
+  color: var(--color-text-body);
+  text-decoration: none;
+}
+
+.navbar__logo {
+  margin-right: auto; /* Mueve el logo a la izquierda */
+}
+
+.navbar__nav-right {
+  margin-left: auto; /* Mueve el menú right a la derecha */
+}

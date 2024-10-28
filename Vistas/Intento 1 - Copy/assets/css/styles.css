@@ -1,0 +1,189 @@
+:root{
+  --color-bg: #edf2f7ff;
+  --color-text-body:#625f5f88;
+  --color-secundary: #14b8a5ff;
+  --color-primary: rgb(255, 255, 255);
+  --color-transparent: transparent;
+
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+body{
+  width: 100%;
+  height: auto;
+  font-family: poppins;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-body);
+  background-color: var(--color-bg);
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+
+}
+header {
+  background-color: var(--color-primary); /* Cambio del color de fondo del header */
+  margin-top: 2rem;
+}
+.layout {
+ /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px red;
+  width: 80%;
+  height: 100%; */
+  position: relative;
+  min-width: 1000px;
+  width: 90%;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-beetween;
+  align-items: center;
+  flex-direction: column;
+}
+/* .nav__icon-user{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-secundary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+.layout__menu{
+  width:100%;
+  padding: 5rem 9.5rem;
+  border-top: 1px solid #ccc; /* Añadir borde superior */
+  border-bottom: 1px solid #ccc;
+}
+.menu__navbar{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.navbar__logo{
+  width: 187px;
+  margin-right: auto; /* Centrar el logo y dejar espacio a la izquierda */
+  margin-left: 10px;
+}
+.nav__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+header {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Ajustes para el menú */
+.navbar__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav_item {
+  margin-right: 20px;
+  position: relative; /* Para posicionar correctamente el submenú */
+}
+
+.nav__title {
+  position: relative;
+}
+
+/* Estilos para el submenú */
+.nav__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.has-submenu:hover .nav__submenu {
+  display: block;
+}
+
+/* Estilo para cambiar el color al pasar el mouse */
+.nav_item:hover .nav__title {
+  color: var(--color-secundary);
+}
+
+.navbar__list-user {
+  margin-left: auto; /* Mueve el menú de usuario a la derecha */
+}
+
+.nav__icon-user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-secundary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+.navbar__list-left {
+  margin-right: auto; /* Mover el primer menú a la izquierda */
+}
+.navbar__list-right {
+  margin-left: auto; /* Mover el segundo menú a la derecha */
+}
+.navbar__list-left,
+.navbar__list-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav__icon {
+  margin-right: 5px; /* Espacio entre el icono y el texto en el menú izquierdo */
+}
+.nav__icon_dropmenu {
+  margin-left: 5px; /* Espacio entre el texto y el icono del menú desplegable */
+}
+.logout_button {
+  color: red; /* Cambiar el color del botón de logout a rojo */
+  border-top: 1px solid #ccc; /* Añadir borde superior */
+  border-bottom: 1px solid #ccc; /* Añadir borde inferior */
+}
+.nav__icon:hover {
+  border-bottom-color: var(--color-secundary); /* Cambiar el color del borde inferior al pasar el ratón */
+}
+header:hover {
+  border-color: var(--color-secundary);
+}
+.logout_button {
+  color: red;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav__icon:hover {
+  border-bottom-color: var(--color-secundary);
+}
+/* Mostrar solo icono de usuario */
+.navbar__list-right .nav__icon-user {
+  display: inline-block;
+} */
+

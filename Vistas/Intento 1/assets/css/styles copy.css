@@ -1,0 +1,41 @@
+:root{
+  --color-text-body: #5e5e5e;
+
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'RNSCamelia', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-body)
+
+}
+.layout{
+  width: 100%;
+  min-width: 1600px;
+  height: 100%;
+}
+
+.layout__menu{
+  width: 100%;
+  padding: 5rem 9.5rem;
+}
+.menu__navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__logo{
+  width:200px;
+}
+.nav__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

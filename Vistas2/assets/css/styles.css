@@ -1,0 +1,338 @@
+:root{
+  --color-bg: #edf2f7ff;
+  --color-text-body:#625f5f88;
+  --color-secundary: #14b8a5ff;
+  --color-primary: rgb(255, 255, 255);
+  --color-transparent: transparent;
+}
+
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body{
+  width: 100%;
+  height: auto;
+  font-family: poppins;
+  background-color: var(--color-bg);
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text-body);
+  font-size: 1.6rem;
+}
+
+.layout {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: var(--color-bg); 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+.menu__navbar{
+  margin-top: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: #ccc 1px solid;
+  border-bottom: #ccc 1px solid;
+}
+
+.navbar__logo{
+  min-width: 187px;
+  margin-right: auto;
+  padding-left: 1rem;
+  width: 187px;
+  opacity: 0.5;
+  transition: all 0.3ms linear;
+}
+
+.navbar__logo:hover{
+  opacity: 1;
+}
+
+.nav__icon-user {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--color-secundary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+.menu__navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__list-left .nav_item,
+.navbar__list-right .nav_item {
+    margin-right: 4rem;
+}
+
+.navbar__list-left .nav_item {
+  margin-right: 20px;
+}
+
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar__list-left {
+  justify-content: flex-start;
+}
+
+.navbar__list-right {
+  justify-content: flex-end;
+  font-size: 4rem;
+}
+
+.nav_item,
+.item_left {
+  margin-right: 20px;
+  margin-left: 50px;
+  position: relative;
+}
+
+.item_left:hover::after {
+  width: 100%;
+}
+
+.navbar__list-right .nav__icon,
+.navbar__list-right .nav__icon-user {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar__list-right .nav__icon-user {
+    border-radius: 50%;
+}
+
+.item_left::after {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 2px solid var(--color-secundary);
+  transition: width 0.3s ease;
+}
+
+.nav_item:hover .nav__title {
+  color: var(--color-secundary);
+}
+
+.navbar__list-user {
+  margin-left: auto;
+}
+
+.nav__icon-user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-secundary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+.nav__icon {
+  margin-right: 5px;
+}
+
+.nav__icon_dropmenu {
+  margin-left: 5px;
+}
+
+.logout_button {
+  color: red;
+}
+
+.nav__icon:hover {
+  border-bottom-color: var(--color-secundary);
+}
+
+header:hover {
+  border-color: var(--color-secundary);
+}
+
+.logout_menu{
+  width: 10rem;
+}
+
+.nav__icon:hover {
+  border-bottom-color: var(--color-secundary);
+  border-top-color: var(--color-secundary);
+}
+
+.navbar__list-right .nav__icon-user {
+  display: inline-block;
+}
+
+.navbar__list-right .nav__title {
+  font-size: 0;
+}
+
+.navbar__list-right .nav__icon {
+  margin-right: 0;
+  font-size: 1.5rem;
+}
+
+.nav__title::after, .navbar__logo::after{
+  content: "";
+  position: absolute;
+  bottom: -3.66rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 4px solid var(--color-secundary);
+  border-top: 4px solid var(--color-secundary);
+  transition: width 0.2s ease;
+}
+
+.nav__title{
+  position: relative;
+}
+
+.item_left>.nav__title{
+  line-height:12rem;
+}
+
+.nav__submenu {
+  display: block;
+  position: absolute;
+  top: 101%;
+  left: 2rem;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  z-index: 100;
+  transition: all 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 13px 48px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__submenu .nav__submenu-logout{
+  display: block;
+  position: absolute;
+  top: 101%;
+  left: 2rem;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 1px;
+  border: 1px solid #ccc;
+  z-index: 100;
+  transition: all 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 13px 48px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__submenu .submenu__item {
+  width: 19rem;
+}
+
+.nav__submenu .logout_menu {
+  width: 10rem;
+}
+
+.submenu__item{
+  opacity: 1;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.submenu__link{
+  position: relative;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-text-body);
+  padding: 0.7rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.has-submenu:hover>.nav__submenu {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  left: 0;
+}
+
+.has-submenu:hover .submenu__item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.submenu__item:nth-child(1){
+  transition-delay: 0.1s;
+}
+
+.submenu__item:nth-child(2){
+  transition-delay: 0.15s;
+}
+
+.navbar__list-right .nav_item {
+  margin-right: 0.5rem; /* Reducir el espacio entre los elementos */
+}
+
+.navbar__list-right .nav__icon,
+.navbar__list-right .nav__icon-user {
+  margin-left: 4rem;
+  position: absolute;
+  width: 3rem; /* Ajusta el tamaño de los iconos */
+  height: 3rem;
+  margin-right: 0.5rem; /* Reducir el espacio entre los iconos */
+  font-size: 2.5rem; /* Ajusta el tamaño de los iconos */
+  opacity: 01;
+}
+
+.navbar__list-right .nav__icon-user {
+  position: relative;
+  width: 60px; /* Ajusta el tamaño del icono de usuario */
+  height: 60px;
+  font-size: 5rem; /* Ajusta el tamaño del icono de usuario */
+  margin-right: 5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega sombra al icono de usuario */
+}
+
+.submenu__link:hover {
+  background-color: var(--color-secundary);
+  color: var(--color-primary);
+}
+
+.submenu__link:hover.logout_button {
+ background-color: rgb(195, 103, 103);
+}

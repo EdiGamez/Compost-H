@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class="layout">
+            <section class="layout__menu">
+                <header class="header__menu">
+                    <div class="header__menu-group">
+                    <div class="logo_header">
+                        <a href="#" class="navbar__link-logo">
+                            <img src="assets/img/logo.png" alt="logo" class="navbar__logo-image">
+                        </a>
+                    </div>
+                    <div class="navbar__header">
+                        <nav class="menu__navbar">
+                            <ul class="navbar__list">
+                                <li class="list__item">
+                                    <a href="#" class="list__title list__title-navbar">
+                                        <i class="fa-solid fa-home"></i>
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__title list__title-navbar">
+                                        <i class="fa-solid fa-droplet"></i>
+                                        Partidas
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                        </a>
+                                        <ul class="list__submenu list__submenu-partida">
+                                            <li class="submenu__item">
+                                                <a href="#" class="submenu__title  submenu__title-nueva-partida">
+                                                    <i class="fa-solid fa-play"></i>
+                                                    Nueva Partida
+                                                </a>
+                                                <div class="input-container">
+                                                    <label class="nueva-partida__label">CXM-</label>
+                                                    <input class="nueva-partida__input" type="text" id="nombreRegistro" >
+                                                    <button class="nueva-partida__buttom">
+                                                        <i class="fa-solid fa-arrow-right nueva-partida-buttom__icon"></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="submenu__item">
+                                                <a href="#" class="submenu__title">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    Search
+                                                </a>
+                                            </li>
+                                        </ul>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__title list__title-navbar">
+                                        <i class="fa-solid fa-history"></i>
+                                        Historial
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__title list__title-navbar">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                        Stats
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                    <div class="profile__header">
+                        <nav class="menu__navbar">
+                            <ul class="navbar__list navbar__list-profile">
+                                <li class="list__item">
+                                    <a href="#" class="list__title">
+                                        <i class="fa-solid fa-user"></i>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__title">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__title list__profile_image">
+                                        <img src="assets/img/user.png" alt="user" class="nav__icon-user">
+                                    </a>
+                                    <ul class ="list__submenu title__submenu-profile">
+                                        <li class="submenu__item">
+                                            <a href="#" class="submenu__title submenu__title-salir">
+                                                <i class="fa-solid fa-sign-out"></i>
+                                                Salir
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                    </div>
+                </header>
+            </section>
+        </div>
+
+
+        <script>
+  window.onload = function() {
+    var nuevaPartida = document.querySelector('.submenu__title');
+    var inputContainer = document.querySelector('.input-container');
+    var submenu = document.querySelector('.list__submenu-partida');
+    inputContainer.style.display = 'none';
+    nuevaPartida.addEventListener('click', function() {
+        if (inputContainer.style.display === 'none') {
+            inputContainer.style.display = 'block';
+            submenu.classList.add('blocked');
+        } else {
+            inputContainer.style.display = 'none';
+            submenu.classList.remove('blocked');
+        }
+    });
+};
+        </script>
+    </body>
+</html>
+
+
